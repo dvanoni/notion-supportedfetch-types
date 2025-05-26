@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Reproduction of issue with Notion SupportedFetch types",
   "scripts": {
-    "typecheck:browser": "tsc --project tsconfig.browser.json",
-    "typecheck:node": "tsc --project tsconfig.node.json",
+    "typecheck:browser": "tsc --project src/browser/tsconfig.json",
+    "typecheck:node": "tsc --project src/node/tsconfig.json",
     "typecheck": "npm run typecheck:browser && npm run typecheck:node"
   },
   "author": "dvanoni",
