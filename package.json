@@ -1,0 +1,17 @@
+{
+  "name": "notion-supportedfetch-types",
+  "version": "1.0.0",
+  "description": "Reproduction of issue with Notion SupportedFetch types",
+  "scripts": {
+    "typecheck:browser": "tsc --project tsconfig.browser.json",
+    "typecheck:node": "tsc --project tsconfig.node.json",
+    "typecheck": "npm run typecheck:browser && npm run typecheck:node"
+  },
+  "author": "dvanoni",
+  "license": "ISC",
+  "dependencies": {
+    "@notionhq/client": "^3.1.2",
+    "@types/node": "^22.15.21",
+    "typescript": "^5.8.3"
+  }
+}
