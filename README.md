@@ -1,5 +1,9 @@
 # Reproduction of issue with Notion `SupportedFetch` types
 
+> [!IMPORTANT]
+> This issue was fixed in https://github.com/makenotion/notion-sdk-js/pull/574
+> and released in [v3.1.3][].
+
 Release [v3.1.0][] of `@notionhq/client` changed the definition of the
 `SupportedFetch` type such that a type error is raised when working with a
 browser environment rather than a Node environment.
@@ -8,6 +12,7 @@ Specifically, `SupportedRequestInit['body']` was [changed][diff] to use the
 `Readable` type from the `node:stream` module, and this is incompatible with the
 type of `body` in the DOM types library.
 
+[v3.1.3]: https://github.com/makenotion/notion-sdk-js/releases/tag/v3.1.3
 [v3.1.0]: https://github.com/makenotion/notion-sdk-js/releases/tag/v3.1.0
 [diff]: https://github.com/makenotion/notion-sdk-js/compare/v3.0.1...v3.1.0#diff-a570c00994d666ae078f11f697662d819f448fd464a194410559e690c374a066L20-R21
 
